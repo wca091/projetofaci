@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+}
+
+nav {
+    position:fixed ;
+    right: 5rem;
+    top: 3rem;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+  }
+  
+  .menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .menu div {
+    width: 30px;
+    height: 5px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+  }
+  
+body {
+      overflow-x: hidden;
+}
+.nav-list {
+      position: absolute;
+      top: 12vh;
+      right: 0;
+      width: 10vw;
+      height: 92vh;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+}
+
+.nav-list li {
+      margin-left: 0;
+      opacity: 0;
+      background-color: transparent;
+      padding: 10px;
+      border-radius: 50px;
+      box-shadow: 5px 5px 10px black;
+}
+
+.menu {
+      display: block;
+}
+  
+.nav-list.active {
+    transform: translateX(0);
+  }
+  
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .active .line2 {
+    opacity: 0;
+  }
+  
+  .active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+
+  
+/*Minha parte*/
+
+body{
+    background-color: #f1f6fc31;
+}
+
+section, footer{
+    padding: 54px 0;
+}
+
+h3{
+    font-size: 50px;
+}
+
+p{
+    color: #0000009c;
+}
+
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.btn{
+    background-color: #4f9cf9;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.1s;
+}
+
+.btn.animate-btn{
+    animation: animate-outline 1s ease-out infinite;
+}
+.btn:hover{
+    background-color: #3580db;
+
+}
+
+@keyframes animate-outline {
+    from{
+        outline: 0px solid #4f9bf98a;
+    }
+
+    to{ 
+        outline: 15px solid #4f9bf900;
+    }
+}
+
+header{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav ul a{
+    color: aliceblue;
+    margin: 0 25px;
+    text-transform:uppercase;
+    font-size: 14px;
+    display: block;
+}
+
+
+nav ul a:hover::after{
+    width: 100%;
+ }
+
+
+.banner{
+    display: flex;
+    justify-content: center;
+}
+
+.banner .banner-text{
+    margin: 150px;
+    text-align: center;
+    padding: 0 90px;
+}
+
+.banner .banner-text h1{
+    font-size: 96px;
+    color: white;
+}
+
+.banner .banner-text p{
+    font-size: 20px;
+    color: white;
+    font-weight: lighter;
+    margin: 18px 0;
+
+}
+
+
+
+/* Estilo para a seção "faca-mais" */
+.section-apresentacao {
+    display: flex;
+    justify-content: space-between; /* Distribui os elementos horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+/* Estilo para a imagem */
+.faca-mais-img img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-left: 20px; /* Adiciona um espaço à esquerda da imagem */
+}
+
+
+.faca-mais-text{
+    height: 100%;
+}
+
+.h3-aoresentacao{
+    height: 80px;
+}
+.p-apresentacao{
+    width: 1150px;
+}
